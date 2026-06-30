@@ -1,4 +1,4 @@
-<img width="780" height="383" alt="image" src="https://github.com/user-attachments/assets/eea745f2-8057-4132-bf71-f0ba51b94298" /># SAHAYAK
+# SAHAYAK
 
 AccessibleFlow: AI-Powered Accessibility Platform
 An open-source, mobile-first web platform designed to empower the 26 million differently-abled individuals in India by providing real-time AI assistive tools directly in their browsers.

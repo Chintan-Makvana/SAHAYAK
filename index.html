@@ -10,7 +10,7 @@
     --paper:#faf8f3;
     --panel:#ffffff;
     --line:#d8d2c4;
-    --accent:#0d6e5f;      /* deep teal — calm, high-contrast, not alarming */
+    --accent:#0d6e5f;     
     --accent-ink:#ffffff;
     --warn:#8a4b18;
     --radius:14px;
@@ -58,7 +58,7 @@
   }
   .brand .tagline{margin:4px 0 0;font-size:.95em;opacity:.8;}
 
-  /* Settings bar — the signature element: always-visible, real controls, not decoration */
+
   .settings{
     display:flex;gap:18px;flex-wrap:wrap;align-items:center;
     margin-top:14px;padding:12px 14px;
@@ -188,7 +188,7 @@
     <button role="tab" aria-selected="false" data-tab="sign"><span class="ico">🤟</span>Sign</button>
   </nav>
 
-  <!-- SPEAK: speech-to-text tuned for speech impediments -->
+  <!-- speech-to-text section-->
   <section class="panel active" id="panel-speak" role="tabpanel">
     <p class="eyebrow">Speech to text</p>
     <h2>Speak, and watch it appear</h2>
@@ -205,7 +205,7 @@
     <p class="note">Uses your browser's built-in speech engine, so nothing you say leaves your device for this feature. Works best in Chrome on Android.</p>
   </section>
 
-  <!-- SEE: scene description for visually impaired users -->
+  
   <section class="panel" id="panel-see" role="tabpanel">
     <p class="eyebrow">Scene description</p>
     <h2>What's in front of the camera</h2>
@@ -225,7 +225,7 @@
     <p class="note">This feature calls an AI vision model to generate the description, so it needs an internet connection. The photo is sent only for this one description and isn't stored by this app.</p>
   </section>
 
-  <!-- SIMPLIFY: text simplification for learning disabilities -->
+ 
   <section class="panel" id="panel-simplify" role="tabpanel">
     <p class="eyebrow">Text simplification</p>
     <h2>Make any text easier to read</h2>
@@ -248,7 +248,7 @@
     <p class="note">Sent to an AI model for rewriting, so this needs an internet connection too.</p>
   </section>
 
-  <!-- SIGN: honest prototype / roadmap for ISL recognition -->
+  
   <section class="panel" id="panel-sign" role="tabpanel">
     <p class="eyebrow">Sign language — early prototype</p>
     <h2>Indian Sign Language phrasebook</h2>
@@ -281,7 +281,7 @@
 </footer>
 
 <script>
-  // ---------- Theme & font size ----------
+ 
   const root = document.documentElement;
   document.querySelectorAll('[data-theme-btn]').forEach(btn=>{
     btn.addEventListener('click',()=>{
@@ -316,7 +316,7 @@
     });
   });
 
-  // ---------- SPEAK (Speech to text) ----------
+  
   const sttOutput = document.getElementById('sttOutput');
   const sttStatus = document.getElementById('sttStatus');
   let finalText = '';
@@ -376,7 +376,7 @@
     return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
 
-  // ---------- SEE (Scene description) ----------
+
   const camVideo = document.getElementById('camVideo');
   const camCanvas = document.getElementById('camCanvas');
   const camStatus = document.getElementById('camStatus');
@@ -439,7 +439,7 @@
     if(t) speak(t);
   });
 
-  // ---------- SIMPLIFY (Text simplification) ----------
+
   document.getElementById('simplifyGo').addEventListener('click', async ()=>{
     const input = document.getElementById('simplifyInput').value.trim();
     const level = document.getElementById('simplifyLevel').value;
@@ -478,7 +478,7 @@
     if(t) speak(t);
   });
 
-  // ---------- SIGN (phrasebook demo) ----------
+ 
   document.querySelectorAll('.phrase-grid button').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       const phrase = btn.dataset.phrase;
